@@ -1,9 +1,10 @@
-package com.springbootUtils.controller;
+package org.springbootUtils.controller;
 
-import com.springbootUtils.utils.HttpContextUtils;
-import com.springbootUtils.utils.IPUtils;
+import org.springbootUtils.utils.HttpContextUtils;
+import org.springbootUtils.utils.IPUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -15,5 +16,6 @@ public class TestController {
         HttpServletRequest request = HttpContextUtils.getHttpServletRequest();
         String ip = IPUtils.getIpAddr(request);
         return ip;
+
     }
 }
